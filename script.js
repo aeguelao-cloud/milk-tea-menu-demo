@@ -1,69 +1,59 @@
-// Menu content is centralized here so future client menu updates are simple.
+// 菜单内容集中放在这里，后续给客户改产品和价格会比较方便。
 const menuData = {
+  recommend: [
+    {
+      name: "黑糖珍珠奶茶",
+      description: "黑糖珍珠现煮，茶味和奶味都比较稳，默认七分糖。",
+      price: "￥16"
+    },
+    {
+      name: "生椰拿铁",
+      description: "椰乳搭配咖啡，口感清爽，适合下午提神。",
+      price: "￥20"
+    },
+    {
+      name: "蜂蜜黄油吐司",
+      description: "现烤吐司，外层微脆，适合堂食慢慢吃。",
+      price: "￥22"
+    }
+  ],
   "milk-tea": [
     {
-      name: "Classic Milk Tea",
-      description: "Black tea, fresh milk and mellow sweetness.",
-      price: "$4.20"
+      name: "黑糖珍珠奶茶",
+      description: "黑糖珍珠、鲜奶和红茶底，甜度可选。",
+      price: "￥16"
     },
     {
-      name: "Brown Sugar Pearl Latte",
-      description: "Brown sugar pearls, fresh milk and creamy tea foam.",
-      price: "$5.20"
+      name: "芋泥波波奶茶",
+      description: "芋泥口感绵密，搭配小波波，喝起来更有饱腹感。",
+      price: "￥18"
     },
     {
-      name: "Jasmine Milk Tea",
-      description: "Light jasmine tea blended with milk and soft cream.",
-      price: "$4.60"
+      name: "茉莉奶绿",
+      description: "茉莉绿茶香气清爽，适合少糖或三分糖。",
+      price: "￥15"
     },
     {
-      name: "Oat Milk Tea",
-      description: "Plant-based oat milk, roasted tea and gentle sweetness.",
-      price: "$4.90"
+      name: "抹茶红豆奶盖",
+      description: "抹茶、红豆和轻奶盖组合，甜度建议五分糖。",
+      price: "￥19"
     }
   ],
-  coffee: [
+  "coffee-dessert": [
     {
-      name: "Americano",
-      description: "Clean espresso with hot water, simple and balanced.",
-      price: "$3.60"
+      name: "生椰拿铁",
+      description: "咖啡香和椰乳香都不会太重，冰饮更清爽。",
+      price: "￥20"
     },
     {
-      name: "Caramel Cloud Coffee",
-      description: "Espresso, milk foam and a light caramel drizzle.",
-      price: "$4.80"
+      name: "抹茶红豆奶盖",
+      description: "抹茶底带一点回甘，红豆和奶盖更适合堂食。",
+      price: "￥19"
     },
     {
-      name: "Vanilla Latte",
-      description: "Smooth espresso with steamed milk and vanilla notes.",
-      price: "$4.50"
-    },
-    {
-      name: "Cold Brew Cream",
-      description: "Slow-steeped coffee with sweet cream and ice.",
-      price: "$4.90"
-    }
-  ],
-  dessert: [
-    {
-      name: "Honey Butter Toast",
-      description: "Crispy toast, honey butter and soft cream topping.",
-      price: "$5.20"
-    },
-    {
-      name: "Matcha Tiramisu",
-      description: "Creamy mascarpone, matcha powder and cake layers.",
-      price: "$5.60"
-    },
-    {
-      name: "Cream Cheese Cake",
-      description: "Light cheesecake slice with a mellow milk finish.",
-      price: "$4.80"
-    },
-    {
-      name: "Mango Pudding",
-      description: "Fresh mango flavor with silky pudding texture.",
-      price: "$3.90"
+      name: "蜂蜜黄油吐司",
+      description: "现烤约 6 分钟，适合搭配热饮或两个人分着吃。",
+      price: "￥22"
     }
   ]
 };
@@ -132,4 +122,4 @@ tabButtons.forEach((button) => {
   });
 });
 
-renderMenu("milk-tea");
+renderMenu("recommend");

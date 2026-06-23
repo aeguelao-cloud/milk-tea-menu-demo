@@ -1,117 +1,139 @@
-# Mellow Tea 奶茶店/咖啡店菜单网站 Demo
+# 小鹿奶茶 Mellow Tea 网站 Demo
 
-这是一个适合奶茶店、咖啡店、甜品店、小餐馆展示使用的静态官网模板。页面包含顶部导航、Hero 首页、招牌饮品、菜单价格、店铺介绍、营业时间、地址联系方式和页脚，适合以后接单时作为作品集 Demo 展示。
+这是一个用 HTML、CSS、JavaScript 做的奶茶店菜单网站 Demo。页面内容改成了比较像中国本地小店的案例，适合学生前端练习、作品集展示，也适合以后接奶茶店、咖啡店、甜品店这类小单时拿给客户看。
 
-## 适合什么客户
+项目没有使用 React、Vue 或其他框架，直接打开 `index.html` 就能预览。
 
-- 奶茶店、咖啡店、甜品店
-- 轻食店、烘焙店、小餐馆
-- 需要一个简洁官网、菜单展示页、开业宣传页的本地小店
-- 预算不高但希望页面看起来专业、现代、温暖的客户
+## 这个 Demo 适合展示给谁
+
+- 奶茶店、咖啡店、甜品店、小吃店
+- 想要一个简单官网或菜单展示页的本地商家
+- 需要展示营业时间、地址、电话、微信和菜单价格的小店
+- 前端初学者用来展示页面布局、响应式和基础交互能力
+
+## 页面包含什么
+
+- 固定顶部导航栏
+- 首页 Hero 区域
+- 今日推荐产品卡片
+- 可点击切换的菜单价格
+- 关于小店介绍
+- 营业时间、地址、电话、微信
+- 页脚信息
+- 手机端汉堡菜单
 
 ## 如何修改店名
 
-打开 `index.html`，搜索 `Mellow Tea`，替换成客户的店名即可。
+打开 `index.html`，搜索：
 
-常见位置：
+```text
+小鹿奶茶 Mellow Tea
+```
 
-- 页面标题：`<title>Mellow Tea | Milk Tea & Coffee Menu Demo</title>`
-- 导航 Logo 文案：`Mellow Tea`
-- 关于我们标题和页脚店名
+把它替换成客户的店名即可。
 
-如果想修改圆形 Logo 里的字母，搜索 `MT`，改成客户店名缩写，例如 `CT`、`BK`。
+如果要改左上角圆形 Logo 里的字，可以搜索：
+
+```text
+鹿
+```
+
+然后改成客户店铺的简称，例如 `茶`、`咖`、`甜`。
 
 ## 如何修改菜单和价格
 
-菜单数据集中写在 `script.js` 顶部的 `menuData` 里。
+菜单数据放在 `script.js` 顶部的 `menuData` 里。
 
-示例：
+例如：
 
 ```js
 {
-  name: "Classic Milk Tea",
-  description: "Black tea, fresh milk and mellow sweetness.",
-  price: "$4.20"
+  name: "黑糖珍珠奶茶",
+  description: "黑糖珍珠现煮，茶味和奶味都比较稳，默认七分糖。",
+  price: "￥16"
 }
 ```
 
-你可以直接修改：
+修改时主要改这三项：
 
-- `name`：产品名称
-- `description`：产品描述
+- `name`：产品名
+- `description`：简单介绍
 - `price`：价格
 
-分类目前有：
+当前菜单里用了这些示例产品：
 
-- `milk-tea`
-- `coffee`
-- `dessert`
+- 黑糖珍珠奶茶 ￥16
+- 芋泥波波奶茶 ￥18
+- 茉莉奶绿 ￥15
+- 生椰拿铁 ￥20
+- 抹茶红豆奶盖 ￥19
+- 蜂蜜黄油吐司 ￥22
 
-如果要新增分类，需要同时修改 `index.html` 里的分类按钮，以及 `script.js` 里的 `menuData`。
+## 如何修改地址和联系方式
 
-## 如何修改联系方式
+打开 `index.html`，搜索并替换这些内容：
 
-打开 `index.html`，搜索以下示例内容并替换：
+- `上海市徐汇区桂林路 88 号阳光里 1F-12`
+- `021-6688 5200`
+- `xiaolu_milk_tea`
 
-- 电话：`+86 138 0000 8888`
-- 微信：`mellowtea_demo`
-- 邮箱：`hello@mellowtea.demo`
-- 地址：`88 Cream Street, Sunny Plaza, Shanghai`
-- 营业时间：`09:00 - 21:30`
-
-联系按钮现在使用的是邮箱链接：
+电话按钮现在使用的是：
 
 ```html
-<a class="btn btn-primary" href="mailto:hello@mellowtea.demo">Book a Table</a>
+<a class="btn btn-primary" href="tel:+862166885200">电话咨询</a>
 ```
 
-如果客户想跳转微信二维码页面、地图页面或表单页面，可以把 `href` 改成对应链接。
+如果客户更想放微信二维码，可以把按钮改成跳转到图片、表单或联系方式区域。
+
+## 如何修改颜色
+
+主要颜色写在 `style.css` 最上面的 `:root` 里。
+
+常用变量：
+
+- `--cream`：页面背景色
+- `--coffee`：深咖啡文字色
+- `--orange`：按钮和强调色
+- `--caramel`：价格和小标题颜色
+
+一般只改这几个颜色就够了，不建议一次改太多，不然页面容易乱。
+
+## 如何本地预览
+
+直接双击打开：
+
+```text
+index.html
+```
+
+也可以用 VS Code 的 Live Server 插件打开，改完代码后刷新页面看效果。
 
 ## 如何部署到 GitHub Pages
 
-1. 新建一个 GitHub 仓库。
-2. 把 `index.html`、`style.css`、`script.js`、`README.md` 上传到仓库根目录。
-3. 进入仓库的 `Settings`。
-4. 找到 `Pages`。
-5. 在 `Build and deployment` 中选择 `Deploy from a branch`。
-6. Branch 选择 `main`，目录选择 `/root`。
-7. 保存后等待 GitHub 生成访问链接。
+1. 把项目上传到 GitHub 仓库。
+2. 进入仓库的 `Settings`。
+3. 找到 `Pages`。
+4. Source 选择 `Deploy from a branch`。
+5. Branch 选择 `main`，目录选择 `/`。
+6. 保存后等待一会儿，GitHub 会生成网站链接。
 
-部署完成后，GitHub Pages 会给你一个类似这样的链接：
-
-```text
-https://你的用户名.github.io/仓库名/
-```
+如果已经开启过 GitHub Pages，推送代码后页面会自动更新。
 
 ## 如何部署到 Netlify
 
-方法一：拖拽部署
+最简单的方法：
 
 1. 打开 [Netlify](https://www.netlify.com/)。
 2. 登录账号。
 3. 进入 `Sites`。
 4. 把整个项目文件夹拖进去。
-5. 等待部署完成，Netlify 会自动生成一个访问链接。
+5. 等待部署完成。
 
-方法二：连接 GitHub 仓库
-
-1. 把项目上传到 GitHub。
-2. 在 Netlify 中选择 `Add new site`。
-3. 选择 `Import an existing project`。
-4. 连接 GitHub 并选择你的仓库。
-5. 构建命令留空。
-6. 发布目录留空或填写 `/`。
-7. 点击部署。
+如果项目已经放在 GitHub，也可以在 Netlify 里选择导入 GitHub 仓库，构建命令留空，发布目录留空或填写 `/`。
 
 ## 文件说明
 
-- `index.html`：页面结构和示例内容
-- `style.css`：视觉样式、响应式布局、hover 动效
-- `script.js`：手机导航、菜单分类切换、平滑滚动
-- `README.md`：项目修改和部署说明
-
-## 本地预览
-
-这个项目不需要安装依赖，直接双击打开 `index.html` 就可以预览。
-
-如果你使用 VS Code，也可以用 Live Server 插件打开，修改代码后刷新页面查看效果。
+- `index.html`：页面结构和文字内容
+- `style.css`：页面样式、响应式布局、hover 效果
+- `script.js`：菜单切换、手机导航、平滑滚动
+- `README.md`：项目说明和修改方法

@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mellow Tea is a warm modern menu website demo for milk tea, coffee, dessert and small cafe businesses.">
-  <title>Mellow Tea | Milk Tea & Coffee Menu Demo</title>
+  <meta name="description" content="小鹿奶茶 Mellow Tea 是一个适合中国本地奶茶店、咖啡店和甜品小店展示的菜单网站 Demo。">
+  <title>小鹿奶茶 Mellow Tea | 奶茶店菜单网站 Demo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header" id="top">
-    <nav class="navbar" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="Mellow Tea home">
-        <span class="brand-mark">MT</span>
-        <span class="brand-text">Mellow Tea</span>
+    <nav class="navbar" aria-label="主导航">
+      <a class="brand" href="#home" aria-label="小鹿奶茶首页">
+        <span class="brand-mark">鹿</span>
+        <span class="brand-text">小鹿奶茶 Mellow Tea</span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-controls="nav-menu" aria-expanded="false">
+      <button class="nav-toggle" type="button" aria-label="打开导航菜单" aria-controls="nav-menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#signature">Signature</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home">首页</a></li>
+        <li><a href="#signature">今日推荐</a></li>
+        <li><a href="#menu">菜单价格</a></li>
+        <li><a href="#about">关于小店</a></li>
+        <li><a href="#contact">到店联系</a></li>
       </ul>
     </nav>
   </header>
@@ -38,15 +38,20 @@
     <!-- Hero: first impression and main calls to action. -->
     <section class="hero section-shell" id="home">
       <div class="hero-content">
-        <h1>Fresh Tea, Warm Moments</h1>
-        <p class="hero-subtitle">Handcrafted milk tea, specialty coffee and light desserts for slow afternoons, study breaks and friendly catch-ups.</p>
+        <h1>一杯奶茶，坐一会儿。</h1>
+        <p class="hero-subtitle">小鹿奶茶 Mellow Tea 是街角的一家小店，做手作奶茶、现萃咖啡和几款简单甜点。下课、下班、等朋友，都可以来坐坐。</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#menu">View Menu</a>
-          <a class="btn btn-secondary" href="#contact">Contact Us</a>
+          <a class="btn btn-primary" href="#menu">查看菜单</a>
+          <a class="btn btn-secondary" href="#contact">到店联系</a>
+        </div>
+        <div class="service-pills" aria-label="门店服务信息">
+          <span>今日推荐：黑糖珍珠奶茶</span>
+          <span>甜度可选</span>
+          <span>支持自取 / 堂食</span>
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Featured milk tea and coffee illustration">
+      <div class="hero-visual" aria-label="小鹿奶茶招牌饮品插画">
         <div class="drink-card drink-card-main">
           <div class="drink-topper"></div>
           <div class="cup">
@@ -57,22 +62,22 @@
             <span class="bubble bubble-three"></span>
           </div>
           <div class="cup-label">
-            <strong>Brown Sugar Latte</strong>
-            <span>Fresh milk &middot; Tea cream</span>
+            <strong>黑糖珍珠奶茶</strong>
+            <span>今日推荐 &middot; ￥16</span>
           </div>
         </div>
         <div class="mini-product mini-product-one">
           <span class="mini-icon coffee-icon"></span>
           <div>
-            <strong>Velvet Coffee</strong>
-            <span>$4.80</span>
+            <strong>生椰拿铁</strong>
+            <span>￥20</span>
           </div>
         </div>
         <div class="mini-product mini-product-two">
           <span class="mini-icon dessert-icon"></span>
           <div>
-            <strong>Honey Toast</strong>
-            <span>$5.20</span>
+            <strong>蜂蜜黄油吐司</strong>
+            <span>￥22</span>
           </div>
         </div>
       </div>
@@ -81,8 +86,8 @@
     <!-- Signature cards: replace these three products for each client. -->
     <section class="signature section-shell" id="signature">
       <div class="section-heading">
-        <p class="section-note">Customer favorites</p>
-        <h2>Signature Drinks</h2>
+        <p class="section-note">Signature Picks</p>
+        <h2>今日推荐</h2>
       </div>
 
       <div class="product-grid">
@@ -90,27 +95,30 @@
           <div class="product-art milk-tea-art">
             <span></span>
           </div>
-          <h3>Brown Sugar Milk Tea</h3>
-          <p>Slow-cooked brown sugar pearls with creamy fresh milk and mellow black tea.</p>
-          <strong class="price">$5.20</strong>
+          <span class="product-tag">人气款</span>
+          <h3>黑糖珍珠奶茶</h3>
+          <p>黑糖珍珠现煮，搭配茶底和鲜奶，甜度可以按口味调整。</p>
+          <strong class="price">￥16</strong>
         </article>
 
         <article class="product-card">
           <div class="product-art coffee-art">
             <span></span>
           </div>
-          <h3>Caramel Cloud Coffee</h3>
-          <p>Espresso, whipped cream foam and a light caramel finish for a soft daily boost.</p>
-          <strong class="price">$4.80</strong>
+          <span class="product-tag">下午茶</span>
+          <h3>生椰拿铁</h3>
+          <p>椰乳香气比较轻，咖啡不会太苦，适合下午来一杯。</p>
+          <strong class="price">￥20</strong>
         </article>
 
         <article class="product-card">
           <div class="product-art fruit-art">
             <span></span>
           </div>
-          <h3>Peach Oolong Tea</h3>
-          <p>Fresh peach notes, roasted oolong and clear tea jelly with a refreshing finish.</p>
-          <strong class="price">$4.60</strong>
+          <span class="product-tag">甜点搭配</span>
+          <h3>蜂蜜黄油吐司</h3>
+          <p>烤到外层微脆，蜂蜜和黄油香气更明显，适合两个人分着吃。</p>
+          <strong class="price">￥22</strong>
         </article>
       </div>
     </section>
@@ -118,14 +126,14 @@
     <!-- Menu tabs are rendered from script.js so prices stay easy to edit. -->
     <section class="menu-section section-shell" id="menu">
       <div class="section-heading section-heading-centered">
-        <p class="section-note">Freshly prepared</p>
-        <h2>Our Menu</h2>
+        <p class="section-note">Menu</p>
+        <h2>菜单价格</h2>
       </div>
 
-      <div class="menu-tabs" role="tablist" aria-label="Menu categories">
-        <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" data-category="milk-tea">Milk Tea</button>
-        <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="coffee">Coffee</button>
-        <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="dessert">Dessert</button>
+      <div class="menu-tabs" role="tablist" aria-label="菜单分类">
+        <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" data-category="recommend">今日推荐</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="milk-tea">奶茶饮品</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="coffee-dessert">咖啡甜点</button>
       </div>
 
       <div class="menu-board" aria-live="polite">
@@ -150,27 +158,27 @@
       </div>
 
       <div class="about-content">
-        <p class="section-note">About Mellow Tea</p>
-        <h2>A cozy stop for handmade drinks and easy conversations.</h2>
-        <p>Mellow Tea is designed for guests who want a warm place to pause. Every cup is made with fresh ingredients, balanced sweetness and a calm cafe rhythm.</p>
+        <p class="section-note">About 小鹿奶茶</p>
+        <h2>街角小店，不赶时间。</h2>
+        <p>这是一家开在社区旁边的奶茶小店，座位不多，但光线舒服。我们主要做常见但认真一点的饮品，茶底当天煮，珍珠分时段补，口味尽量稳定。</p>
         <ul class="feature-list">
-          <li>Handcrafted drinks prepared after order</li>
-          <li>Fresh tea, roasted coffee and seasonal toppings</li>
-          <li>Comfortable space for friends, study breaks and short meetings</li>
+          <li>现点现做，甜度和冰量都可以说</li>
+          <li>茶底、珍珠、奶盖按当天售卖量准备</li>
+          <li>支持到店自取，也可以坐下喝一会儿</li>
         </ul>
 
         <div class="stats">
           <div>
             <strong>20+</strong>
-            <span>Drinks</span>
+            <span>款饮品</span>
           </div>
           <div>
             <strong>4.8</strong>
-            <span>Rating</span>
+            <span>顾客评分</span>
           </div>
           <div>
             <strong>1000+</strong>
-            <span>Customers</span>
+            <span>附近回头客</span>
           </div>
         </div>
       </div>
@@ -180,24 +188,24 @@
     <section class="contact section-shell" id="contact">
       <div class="section-heading">
         <p class="section-note">Visit Us</p>
-        <h2>Opening Hours & Location</h2>
+        <h2>营业时间和地址</h2>
       </div>
 
       <div class="contact-grid">
         <article class="info-card">
           <span class="info-icon clock-icon" aria-hidden="true"></span>
-          <h3>Opening Hours</h3>
+          <h3>营业时间</h3>
           <dl class="hours-list">
             <div>
-              <dt>Mon - Fri</dt>
+              <dt>周一至周五</dt>
               <dd>09:00 - 21:30</dd>
             </div>
             <div>
-              <dt>Saturday</dt>
+              <dt>周六</dt>
               <dd>10:00 - 22:00</dd>
             </div>
             <div>
-              <dt>Sunday</dt>
+              <dt>周日</dt>
               <dd>10:00 - 20:30</dd>
             </div>
           </dl>
@@ -205,14 +213,14 @@
 
         <article class="info-card info-card-accent">
           <span class="info-icon pin-icon" aria-hidden="true"></span>
-          <h3>Address & Contact</h3>
-          <p>88 Cream Street, Sunny Plaza, Shanghai</p>
+          <h3>门店地址 / 联系</h3>
+          <p>上海市徐汇区桂林路 88 号阳光里 1F-12</p>
           <ul class="contact-list">
-            <li>Phone: +86 138 0000 8888</li>
-            <li>WeChat: mellowtea_demo</li>
-            <li>Email: hello@mellowtea.demo</li>
+            <li>电话：021-6688 5200</li>
+            <li>微信：xiaolu_milk_tea</li>
+            <li>备注：支持自取，堂食座位有限</li>
           </ul>
-          <a class="btn btn-primary" href="mailto:hello@mellowtea.demo">Book a Table</a>
+          <a class="btn btn-primary" href="tel:+862166885200">电话咨询</a>
         </article>
       </div>
     </section>
@@ -221,33 +229,33 @@
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <a class="brand footer-brand" href="#home" aria-label="Mellow Tea home">
-          <span class="brand-mark">MT</span>
-          <span class="brand-text">Mellow Tea</span>
+        <a class="brand footer-brand" href="#home" aria-label="小鹿奶茶首页">
+          <span class="brand-mark">鹿</span>
+          <span class="brand-text">小鹿奶茶 Mellow Tea</span>
         </a>
-        <p>Handmade tea, gentle coffee and warmer everyday moments.</p>
+        <p>手作奶茶、现萃咖啡和简单甜点。路过的时候，欢迎进来坐坐。</p>
       </div>
 
       <div>
-        <h3>Quick Links</h3>
+        <h3>快速查看</h3>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#signature">Signature</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#home">首页</a></li>
+          <li><a href="#signature">今日推荐</a></li>
+          <li><a href="#menu">菜单价格</a></li>
+          <li><a href="#about">关于小店</a></li>
         </ul>
       </div>
 
       <div>
-        <h3>Contact</h3>
+        <h3>联系门店</h3>
         <ul>
-          <li>+86 138 0000 8888</li>
-          <li>hello@mellowtea.demo</li>
-          <li>88 Cream Street, Shanghai</li>
+          <li>021-6688 5200</li>
+          <li>微信：xiaolu_milk_tea</li>
+          <li>上海市徐汇区桂林路 88 号</li>
         </ul>
       </div>
     </div>
-    <p class="copyright">&copy; 2026 Mellow Tea. Demo website template for cafe and drink shops.</p>
+    <p class="copyright">&copy; 2026 小鹿奶茶 Mellow Tea. Student front-end demo for local shop websites.</p>
   </footer>
 
   <script src="script.js"></script>
