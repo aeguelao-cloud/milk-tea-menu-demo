@@ -7,37 +7,37 @@ const menuData = {
         name: "黑糖珍珠奶茶",
         description: "黑糖珍珠、鲜奶和红茶底，默认七分糖。",
         price: "￥16",
-        image: "https://images.pexels.com/photos/12666754/pexels-photo-12666754.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/brown-sugar.webp"
       },
       {
         name: "芋泥波波奶茶",
         description: "绵密芋泥搭配小波波，口感更扎实。",
         price: "￥18",
-        image: "https://images.pexels.com/photos/27126830/pexels-photo-27126830.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/taro-boba.webp"
       },
       {
         name: "茉莉奶绿",
         description: "茉莉茶香清爽，推荐三分糖或五分糖。",
         price: "￥15",
-        image: "https://images.pexels.com/photos/8004574/pexels-photo-8004574.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/jasmine-matcha.webp"
       },
       {
         name: "奥利奥奶茶",
         description: "奶茶加入奥利奥碎，甜度建议五分糖。",
         price: "￥17",
-        image: "https://images.pexels.com/photos/9271564/pexels-photo-9271564.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/package-milk-tea.webp"
       },
       {
         name: "红豆奶茶",
         description: "软糯红豆搭配经典奶茶，冷热可选。",
         price: "￥16",
-        image: "https://images.pexels.com/photos/12666754/pexels-photo-12666754.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/taro-boba.webp"
       },
       {
         name: "抹茶奶盖",
         description: "抹茶茶底配轻奶盖，入口微苦回甘。",
         price: "￥19",
-        image: "https://images.pexels.com/photos/8004574/pexels-photo-8004574.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/jasmine-matcha.webp"
       }
     ]
   },
@@ -48,37 +48,37 @@ const menuData = {
         name: "生椰拿铁",
         description: "椰乳搭配浓缩咖啡，冰饮口感更清爽。",
         price: "￥20",
-        image: "https://images.pexels.com/photos/27548784/pexels-photo-27548784.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/coconut-latte.webp"
       },
       {
         name: "美式咖啡",
         description: "双份浓缩加水，干净直接，冷热可选。",
         price: "￥14",
-        image: "https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/americano.webp"
       },
       {
         name: "拿铁咖啡",
         description: "浓缩咖啡与鲜奶搭配，口感柔和。",
         price: "￥18",
-        image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/hot-latte.webp"
       },
       {
         name: "焦糖玛奇朵",
         description: "焦糖、奶泡与咖啡搭配，甜香顺口。",
         price: "￥22",
-        image: "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/coconut-latte.webp"
       },
       {
         name: "燕麦拿铁",
         description: "燕麦奶搭配浓缩，谷物香气更明显。",
         price: "￥21",
-        image: "https://images.pexels.com/photos/27548784/pexels-photo-27548784.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/hot-latte.webp"
       },
       {
         name: "海盐奶盖咖啡",
         description: "冰咖啡配轻咸奶盖，层次更丰富。",
         price: "￥20",
-        image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/package-coffee-cup.webp"
       }
     ]
   },
@@ -89,37 +89,37 @@ const menuData = {
         name: "蜂蜜黄油吐司",
         description: "现烤吐司配蜂蜜黄油，外脆内软。",
         price: "￥22",
-        image: "https://images.pexels.com/photos/5199134/pexels-photo-5199134.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/honey-toast.webp"
       },
       {
         name: "抹茶红豆蛋糕",
         description: "抹茶微苦，红豆带甜，适合配咖啡。",
         price: "￥19",
-        image: "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/cheesecake.webp"
       },
       {
         name: "奶油可颂",
         description: "酥皮可颂搭配轻奶油，每日限量。",
         price: "￥16",
-        image: "https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/croissant.webp"
       },
       {
         name: "芝士蛋糕",
         description: "奶香柔和，冷藏后口感更细腻。",
         price: "￥18",
-        image: "https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/cheesecake.webp"
       },
       {
         name: "巧克力蛋糕",
         description: "巧克力味浓郁，甜度不会太重。",
         price: "￥20",
-        image: "https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/chocolate-cake.webp"
       },
       {
         name: "原味司康",
         description: "外层微酥，搭配咖啡或奶茶都合适。",
         price: "￥12",
-        image: "https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "assets/brand/croissant.webp"
       }
     ]
   }
@@ -134,6 +134,12 @@ const menuCategoryTitle = document.querySelector("#menu-category-title");
 const tabButtons = document.querySelectorAll(".tab-btn");
 const choiceGroups = document.querySelectorAll(".choice-group");
 const preferenceResult = document.querySelector("#preference-result");
+const imageModal = document.querySelector("#image-modal");
+const modalImage = document.querySelector("#modal-product-image");
+const modalName = document.querySelector("#modal-product-name");
+const modalPrice = document.querySelector("#modal-product-price");
+const modalDescription = document.querySelector("#modal-product-description");
+const modalClose = document.querySelector(".modal-close");
 
 function closeMobileMenu() {
   navToggle.classList.remove("is-active");
@@ -150,7 +156,17 @@ function renderMenu(category) {
   menuList.innerHTML = categoryData.items
     .map((item) => `
       <article class="menu-item">
-        <img src="${item.image}" alt="${item.name}" loading="lazy">
+        <button
+          class="image-zoom-button menu-image-button"
+          type="button"
+          data-image="${item.image}"
+          data-name="${item.name}"
+          data-price="${item.price}"
+          data-description="${item.description}"
+          aria-label="放大${item.name}图片"
+        >
+          <img src="${item.image}" alt="小鹿奶茶${item.name}" loading="lazy">
+        </button>
         <div class="menu-item-copy">
           <h3>${item.name}</h3>
           <p>${item.description}</p>
@@ -159,6 +175,21 @@ function renderMenu(category) {
       </article>
     `)
     .join("");
+}
+
+function openImageModal(trigger) {
+  modalImage.src = trigger.dataset.image;
+  modalImage.alt = trigger.dataset.name;
+  modalName.textContent = trigger.dataset.name;
+  modalPrice.textContent = trigger.dataset.price;
+  modalDescription.textContent = trigger.dataset.description;
+  imageModal.showModal();
+  document.body.classList.add("modal-open");
+}
+
+function closeImageModal() {
+  imageModal.close();
+  document.body.classList.remove("modal-open");
 }
 
 function updatePreferenceSummary() {
@@ -236,6 +267,21 @@ choiceGroups.forEach((group) => {
       updatePreferenceSummary();
     });
   });
+});
+
+document.addEventListener("click", (event) => {
+  const imageTrigger = event.target.closest(".image-zoom-button");
+  if (imageTrigger) openImageModal(imageTrigger);
+});
+
+modalClose.addEventListener("click", closeImageModal);
+
+imageModal.addEventListener("click", (event) => {
+  if (event.target === imageModal) closeImageModal();
+});
+
+imageModal.addEventListener("close", () => {
+  document.body.classList.remove("modal-open");
 });
 
 const observedSections = [...document.querySelectorAll("main section[id]")];

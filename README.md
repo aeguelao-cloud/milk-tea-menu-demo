@@ -23,6 +23,8 @@
 - Swiper 今日推荐产品轮播
 - 奶茶、咖啡、甜点分类切换
 - 每个菜单项目展示小图、名称、说明和价格
+- 产品图片点击后显示大图、名称、价格和说明
+- 门店包装展示：奶茶杯、咖啡杯、外带袋和杯套
 - 甜度、冰度、小料选择展示
 - AOS 轻量滚动动画
 - 关于小店数字增长动画
@@ -86,15 +88,32 @@ Mellow Tea
 
 ## 如何修改图片
 
-首页和今日推荐图片位于 `index.html` 的 `<img>` 标签中，分类菜单图片位于 `script.js` 的 `menuData` 中。
+当前统一门店图片放在：
 
-可以使用在线图片链接，也可以新建 `images` 文件夹保存门店自己的图片：
-
-```html
-<img src="images/brown-sugar-milk-tea.jpg" alt="黑糖珍珠奶茶">
+```text
+assets/brand/
 ```
 
-图片已经设置 `object-fit: cover`，替换后会保持比例并自动裁切。
+其中包括饮品、甜点、首页场景和包装展示素材。首页和今日推荐图片位于 `index.html` 中，分类菜单图片位于 `script.js` 的 `menuData` 中。
+
+可以替换为门店自己的图片：
+
+```html
+<img src="assets/brand/brown-sugar.webp" alt="黑糖珍珠奶茶">
+```
+
+图片已经设置 `object-fit: cover`，替换后会保持比例并自动裁切。点击产品图片会打开大图预览，弹窗内容从图片按钮的 `data-image`、`data-name`、`data-price` 和 `data-description` 读取。
+
+## 如何修改包装展示
+
+「门店包装」区域位于 `index.html` 的 `.packaging` 区域，示例内容包括：
+
+- 奶茶杯包装
+- 咖啡杯包装
+- 外带袋
+- 杯套设计
+
+替换 `assets/brand/` 中对应图片，或修改包装卡片的图片路径和说明即可。图片、包装、菜单和价格都可以根据真实门店内容替换。
 
 ## 如何修改口味选项
 
@@ -158,7 +177,7 @@ index.html
 
 也可以使用 VS Code Live Server 或其他静态服务器预览。
 
-页面通过 CDN 加载 AOS、Swiper 和在线图片，因此联网时可以看到完整动画、轮播和图片效果。
+页面通过 CDN 加载 AOS 和 Swiper。门店产品与包装图片保存在项目本地，打开页面时不依赖图库图片链接。
 
 ## 部署到 GitHub Pages
 
