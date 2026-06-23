@@ -3,19 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="小鹿奶茶 Mellow Tea 是一个适合中国本地奶茶店、咖啡店和甜品小店展示的菜单网站 Demo。">
-  <title>小鹿奶茶 Mellow Tea | 奶茶店菜单网站 Demo</title>
+  <meta name="description" content="小鹿奶茶 Mellow Tea 菜单展示网站 Demo，展示奶茶、咖啡、甜点、营业时间和门店联系方式。">
+  <meta name="theme-color" content="#fbf6ee">
+  <title>小鹿奶茶 Mellow Tea | 菜单展示网站 Demo</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.pexels.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
+
+  <!-- AOS and Swiper are lightweight CDN plugins. No build step is required. -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header" id="top">
     <nav class="navbar" aria-label="主导航">
       <a class="brand" href="#home" aria-label="小鹿奶茶首页">
-        <span class="brand-mark">鹿</span>
-        <span class="brand-text">小鹿奶茶 Mellow Tea</span>
+        <span class="brand-mark" aria-hidden="true">鹿</span>
+        <span class="brand-copy">
+          <strong>小鹿奶茶</strong>
+          <small>Mellow Tea</small>
+        </span>
       </a>
 
       <button class="nav-toggle" type="button" aria-label="打开导航菜单" aria-controls="nav-menu" aria-expanded="false">
@@ -25,232 +35,436 @@
       </button>
 
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="#home">首页</a></li>
-        <li><a href="#signature">今日推荐</a></li>
-        <li><a href="#menu">菜单价格</a></li>
-        <li><a href="#about">关于小店</a></li>
-        <li><a href="#contact">到店联系</a></li>
+        <li><a class="nav-link is-active" href="#home">首页</a></li>
+        <li><a class="nav-link" href="#signature">今日推荐</a></li>
+        <li><a class="nav-link" href="#menu">菜单价格</a></li>
+        <li><a class="nav-link" href="#about">关于小店</a></li>
+        <li><a class="nav-link" href="#contact">到店联系</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Hero: first impression and main calls to action. -->
+    <!-- Hero: keep the first screen simple and focused on the shop and menu. -->
     <section class="hero section-shell" id="home">
-      <div class="hero-content">
-        <h1>一杯奶茶，坐一会儿。</h1>
-        <p class="hero-subtitle">小鹿奶茶 Mellow Tea 是街角的一家小店，做手作奶茶、现萃咖啡和几款简单甜点。下课、下班、等朋友，都可以来坐坐。</p>
+      <div class="hero-content" data-aos="fade-up">
+        <p class="hero-overline">Mellow Tea · 街角小店</p>
+        <h1>一杯奶茶，<br><em>坐一会儿。</em></h1>
+        <p class="hero-subtitle">
+          手作奶茶、现萃咖啡和几款简单甜点。下课、下班、等朋友，
+          都可以来坐坐，也可以提前联系到店自取。
+        </p>
+
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#menu">查看菜单</a>
+          <a class="btn btn-primary" href="#menu">
+            查看菜单
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
           <a class="btn btn-secondary" href="#contact">到店联系</a>
         </div>
-        <div class="service-pills" aria-label="门店服务信息">
-          <span>今日推荐：黑糖珍珠奶茶</span>
-          <span>甜度可选</span>
-          <span>支持自取 / 堂食</span>
-        </div>
+
+        <ul class="service-list" aria-label="门店服务信息">
+          <li><span class="service-dot"></span>今日推荐</li>
+          <li><span class="service-dot"></span>甜度可选</li>
+          <li><span class="service-dot"></span>支持自取 / 堂食</li>
+        </ul>
       </div>
 
-      <div class="hero-visual" aria-label="小鹿奶茶招牌饮品照片展示">
-        <div class="drink-card drink-card-main photo-card-main">
-          <img class="hero-photo" src="https://images.pexels.com/photos/9271564/pexels-photo-9271564.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="奶茶店桌面上的珍珠奶茶">
-          <div class="cup-label">
+      <div class="hero-visual" data-aos="fade-left" data-aos-delay="100">
+        <div class="hero-photo-frame">
+          <img
+            class="hero-photo"
+            src="https://images.pexels.com/photos/9271564/pexels-photo-9271564.jpeg?auto=compress&cs=tinysrgb&w=1400"
+            alt="桌面上的珍珠奶茶"
+            fetchpriority="high"
+          >
+          <div class="hero-photo-shade" aria-hidden="true"></div>
+          <div class="hero-product-label">
+            <span>今日推荐</span>
             <strong>黑糖珍珠奶茶</strong>
-            <span>今日推荐 &middot; ￥16</span>
+            <small>Brown Sugar Boba · ￥16</small>
           </div>
         </div>
-        <div class="mini-product mini-product-one">
-          <img class="mini-photo" src="https://images.pexels.com/photos/27548784/pexels-photo-27548784.jpeg?auto=compress&cs=tinysrgb&w=500" alt="生椰拿铁">
+
+        <div class="hero-mini-card hero-mini-top">
+          <img
+            src="https://images.pexels.com/photos/27548784/pexels-photo-27548784.jpeg?auto=compress&cs=tinysrgb&w=400"
+            alt="冰生椰拿铁"
+          >
           <div>
-            <strong>生椰拿铁</strong>
-            <span>￥20</span>
+            <span>清爽咖啡</span>
+            <strong>生椰拿铁 ￥20</strong>
           </div>
         </div>
-        <div class="mini-product mini-product-two">
-          <img class="mini-photo" src="https://images.pexels.com/photos/5199134/pexels-photo-5199134.jpeg?auto=compress&cs=tinysrgb&w=500" alt="蜂蜜黄油吐司">
+
+        <div class="hero-mini-card hero-mini-bottom">
+          <span class="open-indicator" aria-hidden="true"></span>
           <div>
-            <strong>蜂蜜黄油吐司</strong>
-            <span>￥22</span>
+            <span>今日营业</span>
+            <strong>09:00 - 21:30</strong>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Signature cards: replace these three products for each client. -->
-    <section class="signature section-shell" id="signature">
-      <div class="section-heading">
-        <p class="section-note">Signature Picks</p>
-        <h2>今日推荐</h2>
+    <div class="shop-strip" aria-label="门店特点">
+      <div class="section-shell shop-strip-inner">
+        <span>现点现做</span>
+        <i aria-hidden="true"></i>
+        <span>茶底每日现煮</span>
+        <i aria-hidden="true"></i>
+        <span>甜度冰量可调整</span>
+        <i aria-hidden="true"></i>
+        <span>适合小坐与自取</span>
+      </div>
+    </div>
+
+    <!-- Signature products: Swiper controls the responsive card count. -->
+    <section class="signature section-shell section-spacing" id="signature">
+      <div class="section-intro section-intro-row" data-aos="fade-up">
+        <div>
+          <p class="section-kicker">Signature Picks</p>
+          <h2>今天喝点什么？</h2>
+        </div>
+        <p>店里常被点到的几款，第一次来可以从这里选。</p>
       </div>
 
-      <div class="product-grid">
-        <article class="product-card">
-          <figure class="product-photo-wrap">
-            <img src="https://images.pexels.com/photos/12666754/pexels-photo-12666754.jpeg?auto=compress&cs=tinysrgb&w=900" alt="黑糖珍珠奶茶">
-          </figure>
-          <span class="product-tag">人气款</span>
-          <h3>黑糖珍珠奶茶</h3>
-          <p>黑糖珍珠现煮，搭配茶底和鲜奶，甜度可以按口味调整。</p>
-          <strong class="price">￥16</strong>
-        </article>
+      <div class="signature-slider-wrap" data-aos="fade-up" data-aos-delay="80">
+        <div class="swiper signature-swiper">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide product-card">
+              <figure class="product-photo-wrap">
+                <img
+                  src="https://images.pexels.com/photos/12666754/pexels-photo-12666754.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                  alt="黑糖珍珠奶茶"
+                  loading="lazy"
+                >
+                <span class="product-badge">人气款</span>
+              </figure>
+              <div class="product-card-body">
+                <div class="product-meta">
+                  <span>Milk Tea</span>
+                  <strong>￥16</strong>
+                </div>
+                <h3>黑糖珍珠奶茶</h3>
+                <p>黑糖珍珠现煮，搭配红茶和鲜奶，默认七分糖。</p>
+              </div>
+            </article>
 
-        <article class="product-card">
-          <figure class="product-photo-wrap">
-            <img src="https://images.pexels.com/photos/27548784/pexels-photo-27548784.jpeg?auto=compress&cs=tinysrgb&w=900" alt="生椰拿铁">
-          </figure>
-          <span class="product-tag">下午茶</span>
-          <h3>生椰拿铁</h3>
-          <p>椰乳香气比较轻，咖啡不会太苦，适合下午来一杯。</p>
-          <strong class="price">￥20</strong>
-        </article>
+            <article class="swiper-slide product-card">
+              <figure class="product-photo-wrap">
+                <img
+                  src="https://images.pexels.com/photos/27548784/pexels-photo-27548784.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                  alt="生椰拿铁"
+                  loading="lazy"
+                >
+                <span class="product-badge">下午茶</span>
+              </figure>
+              <div class="product-card-body">
+                <div class="product-meta">
+                  <span>Coffee</span>
+                  <strong>￥20</strong>
+                </div>
+                <h3>生椰拿铁</h3>
+                <p>椰乳香气轻一点，咖啡不太苦，冰饮更清爽。</p>
+              </div>
+            </article>
 
-        <article class="product-card">
-          <figure class="product-photo-wrap">
-            <img src="https://images.pexels.com/photos/5199134/pexels-photo-5199134.jpeg?auto=compress&cs=tinysrgb&w=900" alt="蜂蜜黄油吐司">
-          </figure>
-          <span class="product-tag">甜点搭配</span>
-          <h3>蜂蜜黄油吐司</h3>
-          <p>烤到外层微脆，蜂蜜和黄油香气更明显，适合两个人分着吃。</p>
-          <strong class="price">￥22</strong>
-        </article>
-      </div>
-    </section>
+            <article class="swiper-slide product-card">
+              <figure class="product-photo-wrap">
+                <img
+                  src="https://images.pexels.com/photos/5199134/pexels-photo-5199134.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                  alt="蜂蜜黄油吐司"
+                  loading="lazy"
+                >
+                <span class="product-badge">现烤甜点</span>
+              </figure>
+              <div class="product-card-body">
+                <div class="product-meta">
+                  <span>Dessert</span>
+                  <strong>￥22</strong>
+                </div>
+                <h3>蜂蜜黄油吐司</h3>
+                <p>外层烤到微脆，蜂蜜和黄油香气适合慢慢吃。</p>
+              </div>
+            </article>
 
-    <!-- Menu tabs are rendered from script.js so prices stay easy to edit. -->
-    <section class="menu-section section-shell" id="menu">
-      <div class="section-heading section-heading-centered">
-        <p class="section-note">Menu</p>
-        <h2>菜单价格</h2>
-      </div>
-
-      <div class="menu-tabs" role="tablist" aria-label="菜单分类">
-        <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" data-category="recommend">今日推荐</button>
-        <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="milk-tea">奶茶饮品</button>
-        <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="coffee-dessert">咖啡甜点</button>
-      </div>
-
-      <div class="menu-board" aria-live="polite">
-        <div class="menu-list" id="menu-list"></div>
-      </div>
-    </section>
-
-    <!-- About section: use this area for store story, ingredients and selling points. -->
-    <section class="about section-shell" id="about">
-      <div class="about-visual">
-        <div class="shop-card">
-          <div class="shop-window">
-            <span></span>
-            <span></span>
-            <span></span>
+            <article class="swiper-slide product-card">
+              <figure class="product-photo-wrap">
+                <img
+                  src="https://images.pexels.com/photos/8004574/pexels-photo-8004574.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                  alt="茉莉奶绿"
+                  loading="lazy"
+                >
+                <span class="product-badge">清爽茶香</span>
+              </figure>
+              <div class="product-card-body">
+                <div class="product-meta">
+                  <span>Fresh Tea</span>
+                  <strong>￥15</strong>
+                </div>
+                <h3>茉莉奶绿</h3>
+                <p>茉莉绿茶香气清爽，推荐三分糖或五分糖。</p>
+              </div>
+            </article>
           </div>
-          <div class="shop-counter">
-            <div></div>
-            <div></div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="swiper-controls" aria-label="推荐产品轮播控制">
+          <button class="swiper-button-prev-custom" type="button" aria-label="上一款">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+          </button>
+          <button class="swiper-button-next-custom" type="button" aria-label="下一款">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu content is rendered from script.js for easy client updates. -->
+    <section class="menu-section section-spacing" id="menu">
+      <div class="section-shell">
+        <div class="section-intro section-intro-centered" data-aos="fade-up">
+          <p class="section-kicker">Our Menu</p>
+          <h2>菜单价格</h2>
+          <p>价格为示例内容，门店可按季节与供应情况调整。</p>
+        </div>
+
+        <div class="menu-tabs" role="tablist" aria-label="菜单分类" data-aos="fade-up" data-aos-delay="60">
+          <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" data-category="milk-tea">奶茶</button>
+          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="coffee">咖啡</button>
+          <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="dessert">甜点</button>
+        </div>
+
+        <div class="menu-board" data-aos="fade-up" data-aos-delay="100">
+          <div class="menu-board-top">
+            <div>
+              <span>小鹿奶茶 Mellow Tea</span>
+              <strong id="menu-category-title">奶茶 · Milk Tea</strong>
+            </div>
+            <small>现点现做 · 甜度冰量可选</small>
+          </div>
+          <div class="menu-list" id="menu-list" aria-live="polite"></div>
+        </div>
+
+        <!-- This selector is a visual demo only and does not submit an order. -->
+        <div class="preference-panel" id="preferences" data-aos="fade-up">
+          <div class="preference-copy">
+            <p class="section-kicker">Make It Yours</p>
+            <h3>口味怎么选</h3>
+            <p>每一行任选一项，看看常见门店选项的展示效果。</p>
+          </div>
+
+          <div class="preference-groups">
+            <fieldset class="choice-group" data-choice-group="sweetness">
+              <legend>甜度选择</legend>
+              <div class="choice-options">
+                <button type="button" data-value="无糖">无糖</button>
+                <button type="button" data-value="三分糖">三分糖</button>
+                <button class="is-selected" type="button" data-value="五分糖">五分糖</button>
+                <button type="button" data-value="七分糖">七分糖</button>
+                <button type="button" data-value="正常糖">正常糖</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="choice-group" data-choice-group="ice">
+              <legend>冰度选择</legend>
+              <div class="choice-options">
+                <button type="button" data-value="去冰">去冰</button>
+                <button class="is-selected" type="button" data-value="少冰">少冰</button>
+                <button type="button" data-value="正常冰">正常冰</button>
+                <button type="button" data-value="热饮">热饮</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="choice-group" data-choice-group="topping">
+              <legend>小料选择</legend>
+              <div class="choice-options">
+                <button class="is-selected" type="button" data-value="珍珠">珍珠</button>
+                <button type="button" data-value="椰果">椰果</button>
+                <button type="button" data-value="布丁">布丁</button>
+                <button type="button" data-value="奶盖">奶盖</button>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="preference-summary" aria-live="polite">
+            <span>当前展示</span>
+            <strong id="preference-result">五分糖 · 少冰 · 珍珠</strong>
+            <small>仅作菜单展示，可根据门店实际选项调整。</small>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="about-content">
-        <p class="section-note">About 小鹿奶茶</p>
-        <h2>街角小店，不赶时间。</h2>
-        <p>这是一家开在社区旁边的奶茶小店，座位不多，但光线舒服。我们主要做常见但认真一点的饮品，茶底当天煮，珍珠分时段补，口味尽量稳定。</p>
+    <!-- About: real shop imagery and a short, local story. -->
+    <section class="about section-shell section-spacing" id="about">
+      <div class="about-visual" data-aos="fade-right">
+        <img
+          src="https://images.pexels.com/photos/32822057/pexels-photo-32822057.jpeg?auto=compress&cs=tinysrgb&w=1400"
+          alt="暖色木质小店内景"
+          loading="lazy"
+        >
+        <div class="about-photo-note">
+          <span>适合小坐</span>
+          <strong>留一点时间给自己</strong>
+        </div>
+      </div>
+
+      <div class="about-content" data-aos="fade-left">
+        <p class="section-kicker">About Mellow Tea</p>
+        <h2>街角小店，<br>不赶时间。</h2>
+        <p>
+          小鹿奶茶 Mellow Tea 是街角的一家小店，做手作奶茶、现萃咖啡和几款简单甜点。
+          下课、下班、等朋友，都可以来坐坐。
+        </p>
+
         <ul class="feature-list">
-          <li>现点现做，甜度和冰量都可以说</li>
-          <li>茶底、珍珠、奶盖按当天售卖量准备</li>
-          <li>支持到店自取，也可以坐下喝一会儿</li>
+          <li>
+            <span>01</span>
+            <div><strong>当天备料</strong><small>茶底当天现煮，珍珠按时段补充。</small></div>
+          </li>
+          <li>
+            <span>02</span>
+            <div><strong>口味好沟通</strong><small>甜度、冰量和小料都可以提前说明。</small></div>
+          </li>
+          <li>
+            <span>03</span>
+            <div><strong>来去都方便</strong><small>支持到店自取，也可以堂食小坐。</small></div>
+          </li>
         </ul>
 
-        <div class="stats">
-          <div>
-            <strong>20+</strong>
-            <span>款饮品</span>
+        <div class="stats" id="shop-stats">
+          <div class="stat-item">
+            <strong><span class="counter" data-target="20" data-suffix="+">0</span></strong>
+            <small>款饮品</small>
           </div>
-          <div>
-            <strong>4.8</strong>
-            <span>顾客评分</span>
+          <div class="stat-item">
+            <strong><span class="counter" data-target="4.8" data-decimals="1">0</span></strong>
+            <small>顾客评分</small>
           </div>
-          <div>
-            <strong>1000+</strong>
-            <span>附近回头客</span>
+          <div class="stat-item">
+            <strong><span class="counter" data-target="1000" data-suffix="+">0</span></strong>
+            <small>位顾客</small>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact section: update the sample hours, address and contact details. -->
-    <section class="contact section-shell" id="contact">
-      <div class="section-heading">
-        <p class="section-note">Visit Us</p>
-        <h2>营业时间和地址</h2>
-      </div>
+    <!-- Contact: replace the sample information with the client's real details. -->
+    <section class="contact-section section-spacing" id="contact">
+      <div class="section-shell">
+        <div class="contact-heading" data-aos="fade-up">
+          <div>
+            <p class="section-kicker">Visit Us</p>
+            <h2>路过的话，欢迎来坐坐。</h2>
+          </div>
+          <p>支持自取与堂食。座位不多，周末来之前可以先电话问一下。</p>
+        </div>
 
-      <div class="contact-grid">
-        <article class="info-card">
-          <span class="info-icon clock-icon" aria-hidden="true"></span>
-          <h3>营业时间</h3>
-          <dl class="hours-list">
-            <div>
-              <dt>周一至周五</dt>
-              <dd>09:00 - 21:30</dd>
+        <div class="contact-grid">
+          <article class="info-card" data-aos="fade-up">
+            <div class="info-card-heading">
+              <span class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+              </span>
+              <div>
+                <small>Opening Hours</small>
+                <h3>营业时间</h3>
+              </div>
             </div>
-            <div>
-              <dt>周六</dt>
-              <dd>10:00 - 22:00</dd>
-            </div>
-            <div>
-              <dt>周日</dt>
-              <dd>10:00 - 20:30</dd>
-            </div>
-          </dl>
-        </article>
 
-        <article class="info-card info-card-accent">
-          <span class="info-icon pin-icon" aria-hidden="true"></span>
-          <h3>门店地址 / 联系</h3>
-          <p>上海市徐汇区桂林路 88 号阳光里 1F-12</p>
-          <ul class="contact-list">
-            <li>电话：021-6688 5200</li>
-            <li>微信：xiaolu_milk_tea</li>
-            <li>备注：支持自取，堂食座位有限</li>
-          </ul>
-          <a class="btn btn-primary" href="tel:+862166885200">电话咨询</a>
-        </article>
+            <dl class="hours-list">
+              <div><dt>周一至周五</dt><dd>09:00 - 21:30</dd></div>
+              <div><dt>周六</dt><dd>10:00 - 22:00</dd></div>
+              <div><dt>周日</dt><dd>10:00 - 20:30</dd></div>
+            </dl>
+
+            <p class="info-note"><span></span>今日正常营业</p>
+          </article>
+
+          <article class="info-card info-card-dark" data-aos="fade-up" data-aos-delay="80">
+            <div class="info-card-heading">
+              <span class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="2.5"></circle>
+                </svg>
+              </span>
+              <div>
+                <small>Store & Contact</small>
+                <h3>门店地址 / 联系</h3>
+              </div>
+            </div>
+
+            <address>上海市徐汇区桂林路 88 号<br>阳光里 1F-12</address>
+            <ul class="contact-list">
+              <li><span>电话</span><a href="tel:+862166885200">021-6688 5200</a></li>
+              <li><span>微信</span><strong>xiaolu_milk_tea</strong></li>
+              <li><span>到店</span><strong>支持自取 / 堂食</strong></li>
+            </ul>
+
+            <a class="btn btn-light" href="tel:+862166885200">
+              电话咨询
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </a>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <div>
+    <div class="footer-inner section-shell">
+      <div class="footer-brand-block">
         <a class="brand footer-brand" href="#home" aria-label="小鹿奶茶首页">
-          <span class="brand-mark">鹿</span>
-          <span class="brand-text">小鹿奶茶 Mellow Tea</span>
+          <span class="brand-mark" aria-hidden="true">鹿</span>
+          <span class="brand-copy">
+            <strong>小鹿奶茶</strong>
+            <small>Mellow Tea</small>
+          </span>
         </a>
         <p>手作奶茶、现萃咖啡和简单甜点。路过的时候，欢迎进来坐坐。</p>
       </div>
 
-      <div>
+      <div class="footer-column">
         <h3>快速查看</h3>
         <ul>
-          <li><a href="#home">首页</a></li>
           <li><a href="#signature">今日推荐</a></li>
           <li><a href="#menu">菜单价格</a></li>
+          <li><a href="#preferences">口味选择</a></li>
           <li><a href="#about">关于小店</a></li>
         </ul>
       </div>
 
-      <div>
+      <div class="footer-column">
         <h3>联系门店</h3>
         <ul>
-          <li>021-6688 5200</li>
+          <li><a href="tel:+862166885200">021-6688 5200</a></li>
           <li>微信：xiaolu_milk_tea</li>
           <li>上海市徐汇区桂林路 88 号</li>
         </ul>
       </div>
     </div>
-    <p class="copyright">&copy; 2026 小鹿奶茶 Mellow Tea. 本页面为菜单展示网站 Demo。</p>
+
+    <p class="copyright section-shell">&copy; 2026 小鹿奶茶 Mellow Tea. 本页面为菜单展示网站 Demo。</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
