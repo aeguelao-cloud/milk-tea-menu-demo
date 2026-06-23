@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mellow Tea is a warm modern menu website demo for milk tea, coffee, dessert and small cafe businesses.">
+  <title>Mellow Tea | Milk Tea & Coffee Menu Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Mellow Tea home">
+        <span class="brand-mark">MT</span>
+        <span class="brand-text">Mellow Tea</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-controls="nav-menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#signature">Signature</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero: first impression and main calls to action. -->
+    <section class="hero section-shell" id="home">
+      <div class="hero-content">
+        <h1>Fresh Tea, Warm Moments</h1>
+        <p class="hero-subtitle">Handcrafted milk tea, specialty coffee and light desserts for slow afternoons, study breaks and friendly catch-ups.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#menu">View Menu</a>
+          <a class="btn btn-secondary" href="#contact">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Featured milk tea and coffee illustration">
+        <div class="drink-card drink-card-main">
+          <div class="drink-topper"></div>
+          <div class="cup">
+            <span class="ice ice-one"></span>
+            <span class="ice ice-two"></span>
+            <span class="bubble bubble-one"></span>
+            <span class="bubble bubble-two"></span>
+            <span class="bubble bubble-three"></span>
+          </div>
+          <div class="cup-label">
+            <strong>Brown Sugar Latte</strong>
+            <span>Fresh milk &middot; Tea cream</span>
+          </div>
+        </div>
+        <div class="mini-product mini-product-one">
+          <span class="mini-icon coffee-icon"></span>
+          <div>
+            <strong>Velvet Coffee</strong>
+            <span>$4.80</span>
+          </div>
+        </div>
+        <div class="mini-product mini-product-two">
+          <span class="mini-icon dessert-icon"></span>
+          <div>
+            <strong>Honey Toast</strong>
+            <span>$5.20</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature cards: replace these three products for each client. -->
+    <section class="signature section-shell" id="signature">
+      <div class="section-heading">
+        <p class="section-note">Customer favorites</p>
+        <h2>Signature Drinks</h2>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-art milk-tea-art">
+            <span></span>
+          </div>
+          <h3>Brown Sugar Milk Tea</h3>
+          <p>Slow-cooked brown sugar pearls with creamy fresh milk and mellow black tea.</p>
+          <strong class="price">$5.20</strong>
+        </article>
+
+        <article class="product-card">
+          <div class="product-art coffee-art">
+            <span></span>
+          </div>
+          <h3>Caramel Cloud Coffee</h3>
+          <p>Espresso, whipped cream foam and a light caramel finish for a soft daily boost.</p>
+          <strong class="price">$4.80</strong>
+        </article>
+
+        <article class="product-card">
+          <div class="product-art fruit-art">
+            <span></span>
+          </div>
+          <h3>Peach Oolong Tea</h3>
+          <p>Fresh peach notes, roasted oolong and clear tea jelly with a refreshing finish.</p>
+          <strong class="price">$4.60</strong>
+        </article>
+      </div>
+    </section>
+
+    <!-- Menu tabs are rendered from script.js so prices stay easy to edit. -->
+    <section class="menu-section section-shell" id="menu">
+      <div class="section-heading section-heading-centered">
+        <p class="section-note">Freshly prepared</p>
+        <h2>Our Menu</h2>
+      </div>
+
+      <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+        <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" data-category="milk-tea">Milk Tea</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="coffee">Coffee</button>
+        <button class="tab-btn" type="button" role="tab" aria-selected="false" data-category="dessert">Dessert</button>
+      </div>
+
+      <div class="menu-board" aria-live="polite">
+        <div class="menu-list" id="menu-list"></div>
+      </div>
+    </section>
+
+    <!-- About section: use this area for store story, ingredients and selling points. -->
+    <section class="about section-shell" id="about">
+      <div class="about-visual">
+        <div class="shop-card">
+          <div class="shop-window">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="shop-counter">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <p class="section-note">About Mellow Tea</p>
+        <h2>A cozy stop for handmade drinks and easy conversations.</h2>
+        <p>Mellow Tea is designed for guests who want a warm place to pause. Every cup is made with fresh ingredients, balanced sweetness and a calm cafe rhythm.</p>
+        <ul class="feature-list">
+          <li>Handcrafted drinks prepared after order</li>
+          <li>Fresh tea, roasted coffee and seasonal toppings</li>
+          <li>Comfortable space for friends, study breaks and short meetings</li>
+        </ul>
+
+        <div class="stats">
+          <div>
+            <strong>20+</strong>
+            <span>Drinks</span>
+          </div>
+          <div>
+            <strong>4.8</strong>
+            <span>Rating</span>
+          </div>
+          <div>
+            <strong>1000+</strong>
+            <span>Customers</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section: update the sample hours, address and contact details. -->
+    <section class="contact section-shell" id="contact">
+      <div class="section-heading">
+        <p class="section-note">Visit Us</p>
+        <h2>Opening Hours & Location</h2>
+      </div>
+
+      <div class="contact-grid">
+        <article class="info-card">
+          <span class="info-icon clock-icon" aria-hidden="true"></span>
+          <h3>Opening Hours</h3>
+          <dl class="hours-list">
+            <div>
+              <dt>Mon - Fri</dt>
+              <dd>09:00 - 21:30</dd>
+            </div>
+            <div>
+              <dt>Saturday</dt>
+              <dd>10:00 - 22:00</dd>
+            </div>
+            <div>
+              <dt>Sunday</dt>
+              <dd>10:00 - 20:30</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="info-card info-card-accent">
+          <span class="info-icon pin-icon" aria-hidden="true"></span>
+          <h3>Address & Contact</h3>
+          <p>88 Cream Street, Sunny Plaza, Shanghai</p>
+          <ul class="contact-list">
+            <li>Phone: +86 138 0000 8888</li>
+            <li>WeChat: mellowtea_demo</li>
+            <li>Email: hello@mellowtea.demo</li>
+          </ul>
+          <a class="btn btn-primary" href="mailto:hello@mellowtea.demo">Book a Table</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand footer-brand" href="#home" aria-label="Mellow Tea home">
+          <span class="brand-mark">MT</span>
+          <span class="brand-text">Mellow Tea</span>
+        </a>
+        <p>Handmade tea, gentle coffee and warmer everyday moments.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#signature">Signature</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li>+86 138 0000 8888</li>
+          <li>hello@mellowtea.demo</li>
+          <li>88 Cream Street, Shanghai</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Mellow Tea. Demo website template for cafe and drink shops.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
